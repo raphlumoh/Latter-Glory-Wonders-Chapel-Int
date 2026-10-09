@@ -224,7 +224,7 @@ section[id] {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: var(--white);
+    background: rgb(203, 203, 214);
     border-bottom: 1px solid var(--border);
     box-shadow: var(--shadow-sm);
 }
