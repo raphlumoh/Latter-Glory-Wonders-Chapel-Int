@@ -347,22 +347,6 @@ section[id] {
 }
 
 
-/* =========================================
-HERO SECTION - BACKGROUND IMAGE
-========================================= */
-
-.hero-section {
-position: relative;
-min-height: 650px;
-display: flex;
-align-items: center;
-background-image: url("church%20community.jpg");
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
-overflow: hidden;
-}
-
 /* DARK GREEN OVERLAY */
 
 .hero-overlay {
@@ -389,6 +373,7 @@ padding-top: 80px;
 padding-bottom: 80px;
 color: #ffffff;
 }
+
 
 .hero-content .eyebrow,
 .hero-content h1,
@@ -516,35 +501,71 @@ background-position: center center;
     line-height: 1.85;
 }
 
+
 /* 8. ABOUT SECTION */
+
 .two-column {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 65px;
 }
-/*
-.about-image {
-    min-height: 430px;
-    border-radius: var(--radius-lg);
-}
-*/
 
-
+/* About image slider container */
 .about-image {
+    position: relative;
     width: 100%;
     height: 400px;
     overflow: hidden;
     border-radius: 15px;
 }
 
-.about-image img {
+
+/* Slider track */
+.about-slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: aboutSlide 10s infinite;
+}
+
+/* Slider images */
+.about-slider img {
+    flex: 0 0 100%;
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
+/* Smooth slideshow for four images plus the duplicate */
+@keyframes aboutSlide {
+    0%, 18% {
+        transform: translateX(0);
+    }
+
+    22%, 40% {
+        transform: translateX(-100%);
+    }
+
+    44%, 62% {
+        transform: translateX(-200%);
+    }
+
+    66%, 84% {
+        transform: translateX(-300%);
+    }
+
+    88%, 98% {
+        transform: translateX(-400%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Image placeholder - keep for any existing placeholders */
 .image-placeholder {
     position: relative;
     display: flex;
@@ -572,6 +593,7 @@ background-position: center center;
     text-align: center;
 }
 
+/* About text content */
 .about-content h2 {
     margin-bottom: 23px;
     letter-spacing: -0.8px;
@@ -582,6 +604,7 @@ background-position: center center;
     line-height: 1.9;
 }
 
+/* About highlights */
 .about-highlights {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -604,6 +627,7 @@ background-position: center center;
     font-size: 0.9rem;
 }
 
+/* About text link */
 .text-link {
     display: inline-block;
     color: var(--primary);
@@ -612,6 +636,39 @@ background-position: center center;
 
 .text-link:hover {
     color: #267b48;
+}
+
+/* Responsive layout for tablets and phones */
+@media (max-width: 768px) {
+    .two-column {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+
+    .about-highlights {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-image {
+        height: 250px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .about-slider {
+        animation: none;
+    }
 }
 
 /* 9. CARDS AND GRID LAYOUTS */
