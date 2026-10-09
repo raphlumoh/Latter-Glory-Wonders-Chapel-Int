@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Welcome to Latter Glory Wonders Chapel International. Discover our ministries, events, community, and opportunities to grow in faith.">
+
+    <meta name="theme-color" content="#14532d">
+
+    <title>LATTER GLORY WONDERS CHAPEL INTERNATIONAL | Faith, Love & Service</title>
+
+    <!-- Website stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Supabase library: authentication and online database -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Website JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER AND NAVIGATION -->
+    <header class="site-header" id="top">
+        <div class="container header-container">
+
+            <a href="#home" class="brand" aria-label="Latter Glory Wonders Chapel International home">
+                <span class="brand-logo">LGWCI</span>
+                <span class="brand-text">
+                    <strong class="church-name">LATTER GLORY <br>WONDERS CHAPEL INTERNATIONAL</strong>
+                    <small>Faith • Love • Service</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-controls="mainNavigation"
+                    aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-navigation" id="mainNavigation" aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#ministries">Ministries</a>
+                <a href="#events">Events</a>
+                <a href="#announcements">News</a>
+                <a href="#leadership">Leadership</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+
+                <button type="button" class="btn btn-primary nav-login" data-open-login>
+                    Member Login
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HOME / HERO -->
+        <section class="hero-section" id="home">
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+                <span class="eyebrow">YOU ARE WELCOME HERE</span>
+                <h1>A Place to Belong, Believe and Grow</h1>
+
+                <p>
+                     Welcome to Latter Glory Wonders Chapel International,
+                    a place where faith is strengthened, lives are transformed,
+                    love is shared, and destinies are nurtured through the Word of God.
+                </p>
+                <p>
+                    Whether you are visiting for the first time or seeking a
+                    church family, we warmly invite you to worship with us,
+                    grow in faith, build meaningful relationships, and serve
+                    our community together.
+                </p>
+                <div class="hero-actions">
+                    <a href="#about" class="btn btn-primary">Discover Our Church</a>
+                    <a href="#contact" class="btn btn-outline">Plan Your Visit</a>
+                </div>
+
+                <div class="hero-scripture">
+                    "Let all that you do be done in love."
+                    <span>— 1 Corinthians 16:14</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICE INFORMATION -->
+        <section class="service-strip" aria-label="Church service information">
+            <div class="container service-grid">
+
+                <article class="service-item">
+                    <span class="service-icon" aria-hidden="true">◷</span>
+                    <div>
+                        <h3>Sunday Worship</h3>
+                        <h4>8 AM every Sunday</h4>
+                    </div>
+                </article>
+
+                <article class="service-item">
+                    <span class="service-icon" aria-hidden="true">✦</span>
+                    <div>
+                        <h3>Bible Study</h3>
+                        <p>Join us in God's Word</p>
+                    </div>
+                </article>
+
+                <article class="service-item">
+                    <span class="service-icon" aria-hidden="true">⌖</span>
+                    <div>
+                        <h3>Our Location</h3>
+                        <p>Church address to be added</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ABOUT US -->
+        <section class="section about-section" id="about">
+            <div class="container two-column">
+<!--
+                <div class="about-image image-placeholder"
+                     role="img"
+                     aria-label="Church congregation gathering">
+                    <span>OUR CHURCH COMMUNITY</span>
+                </div>
+-->
+                
+                <div class="about-image">
+                    <img src="church community.jpg"
+                    alt="Latter Glory Wonders Chapel International church community">
+                </div>
+
+                <div class="about-content">
+                    <span class="eyebrow">GET TO KNOW US</span>
+                    <h2>A Church Built on Faith, Love and Unity</h2>
+
+                    <p>
+                        Latter Glory Wonders Chapel International is a Christian
+                        ministry committed to sharing the Gospel of Jesus Christ,
+                        teaching the Word of God, nurturing spiritual growth, and
+                        demonstrating God's love through service.
+                    </p>
+
+                    <p>
+                           Our desire is to see individuals and families grow in faith,
+                            develop strong Christian character, discover their God-given
+                            purpose, and become positive influences in their communities.
+                    </p>
+
+                    <div class="about-highlights">
+                        <div>
+                            <strong>Our Vision</strong>
+                            <p>To raise a people who know God, walk in His truth,
+                                demonstrate His love, and become instruments of hope,
+                                transformation, and positive change in their generation.
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong>Our Mission</strong>
+                            <p>To preach the Gospel of Jesus Christ, teach God's Word,
+                                encourage prayer and fellowship, strengthen families,
+                                nurture spiritual maturity, and serve our communities
+                                with love and compassion.
+                            </p>
+                        </div>
+                    </div>
+                        <h3>Our Core Values</h3>
+                        <p>
+                            Faith • Love • Unity • Prayer • Integrity • Service
+                        </p>
+                    <a href="#contact" class="text-link">Connect With Us →</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MINISTRIES -->
+        <section class="section ministries-section" id="ministries">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">SERVE AND GROW</span>
+                    <h2>Our Ministries</h2>
+                    <p>
+                            Discover opportunities to grow spiritually, build
+                            relationships, develop your gifts, and serve God
+                            alongside our church family.
+                    </p>
+                </div>
+
+                <div class="card-grid ministry-grid">
+
+                    <article class="content-card ministry-card">
+                        <div class="card-icon" aria-hidden="true">♫</div>
+                        <h3>Worship and Praise</h3>
+                        <p>
+                            Leading the congregation in praise, thanksgiving,
+                            and meaningful worship to God.
+                        </p>
+                    </article>
+
+                    <article class="content-card ministry-card">
+                        <div class="card-icon" aria-hidden="true">♧</div>
+                        <h3>Youth Ministry</h3>
+                        <p>Encourage young people to develop their faith, leadership, and purpose.</p>
+                    </article>
+
+                    <article class="content-card ministry-card">
+                        <div class="card-icon" aria-hidden="true">♡</div>
+                        <h3>Women & Men</h3>
+                        <p>Helping young people grow in faith, character,
+                            purpose, and responsible living..</p>
+                    </article>
+
+                    <article class="content-card ministry-card">
+                        <div class="card-icon" aria-hidden="true">✿</div>
+                        <h3>Children's Ministry</h3>
+                        <p>Teaching children biblical principles and helping
+                            them build a strong foundation of faith..</p>
+                    </article>
+
+                    <article class="content-card ministry-card">
+                        <div class="card-icon" aria-hidden="true">✧</div>
+                       <h3>Evangelism and Outreach</h3>
+                        <p>
+                            Sharing the Gospel and demonstrating Christ's love
+                            through compassion and community service.
+                        </p>
+                    </article>
+
+                    <article class="content-card ministry-card">
+                        <div class="card-icon" aria-hidden="true">♧</div>
+                        <h3>Community Outreach</h3>
+                        <p>Support people in need and make a difference through practical acts of service.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- EVENTS -->
+        <section class="section events-section" id="events">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">SAVE THE DATE</span>
+                    <h2>Upcoming Events</h2>
+                    <p>    Stay connected with our worship services, special
+                        programmes, prayer gatherings, ministry activities,
+                        and community outreach events. Confirmed dates,
+                        times, and venues will be published here</p>
+                </div>
+
+                <div class="card-grid" id="publicEvents">
+
+                    <article class="content-card event-card">
+                        <div class="event-date">
+                            <span>DATE</span>
+                            <strong>TBA</strong>
+                        </div>
+                        <div class="event-details">
+                            <span class="event-category">WORSHIP</span>
+                            <h3>Sunday Worship Service</h3>
+                            <p>Gather together for worship, prayer, fellowship, and the Word of God.</p>
+                            <p class="event-time">Time: To be announced</p>
+                        </div>
+                    </article>
+
+                    <article class="content-card event-card">
+                        <div class="event-date">
+                            <span>DATE</span>
+                            <strong>TBA</strong>
+                        </div>
+                        <div class="event-details">
+                            <span class="event-category">BIBLE STUDY</span>
+                            <h3>Midweek Bible Study</h3>
+                            <p>Grow in biblical understanding through teaching and discussion.</p>
+                            <p class="event-time">Time: To be announced</p>
+                        </div>
+                    </article>
+
+                     <article class="content-card event-card">
+                        <div class="event-date">
+                            <span>DATE</span>
+                            <strong>TBA</strong>
+                        </div>
+                        <div class="event-details">
+                            <span class="event-category">PRAYER MEETING</span>
+                            <h3>Prayer Meetings</h3>
+                            <p>[Schedule to be confirmed]</p>
+                            <p class="event-time">Time: To be announced</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ANNOUNCEMENTS -->
+        <section class="section announcements-section" id="announcements">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">STAY INFORMED</span>
+                    <h2>Church Announcements</h2>
+                    <p>Stay informed about important church updates,
+                        upcoming programmes, service arrangements,
+                        ministry activities, and fellowship opportunities..
+                    </p>
+
+                    <P>Check this section regularly for the latest
+                        announcements from the church leadership.
+                    </P>
+                </div>
+
+                <div class="announcement-list" id="publicAnnouncements">
+                    <article class="announcement-item">
+                        <div class="announcement-symbol" aria-hidden="true">i</div>
+                        <div>
+                            <h3>Welcome to Our Church Website</h3>
+                            <p>We look forward to sharing church news, programmes, and community updates here.</p>
+                            <small>General Announcement</small>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MEMBERSHIP -->
+        <section class="section membership-section" id="members">
+            <div class="container membership-content">
+                <div>
+                    <span class="eyebrow">YOU BELONG HERE</span>
+                    <h2>Become Part of Our Church Family</h2>
+                    <p>Register your interest in membership and stay connected with church activities and announcements.</p>
+                </div>
+
+                <button type="button" class="btn btn-light" data-open-register>
+                    Register Your Interest
+                </button>
+            </div>
+        </section>
+
+
+<!-- LEADERSHIP -->
+<section class="section leadership-section" id="leadership">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="eyebrow">SERVING WITH PURPOSE</span>
+            <h2>Our Leadership</h2>
+            <p>
+                Our leadership is committed to serving God and His
+                people through biblical teaching, prayer, integrity,
+                accountability, and love.
+            </p>
+        </div>
+
+        <div class="card-grid leadership-grid">
+
+            <!-- SENIOR PASTOR -->
+            
+<!-- SENIOR PASTOR -->
+        <article class="content-card leader-card">
+            <div class="leader-details">
+
+                <img
+                    src="senior pastor.jpg"
+                    alt="Senior Pastor"
+                    class="pastor-image"
+                >
+                <h3>Senior </h3>
+                <h3>Pastor Dominic Uduwa</h3>
+
+            </div>
+        </article>
+
+            </article>
+
+            <!-- CHURCH ADMINISTRATOR -->
+            <article class="content-card leader-card">
+                <div class="leader-details">
+
+                <img
+                    src="church admin.jpg"
+                    alt="Church Admin"
+                    class="Admin-image"
+                >
+                <h3>Church Administration</h3>
+                <h3>Latter Glory Wonders Chapel International</h3>
+
+            </div>
+            </article>
+
+            <!-- MINISTRY COORDINATOR -->
+            <article class="content-card leader-card">
+                <div class="leader-details">
+
+                <img
+                    src="cordinator.jpg"
+                    alt="Church cordinator"
+                    class="Cordinator-image"
+                >
+                <h3>Ministry Cordinator</h3>
+                <h3>Latter Glory Wonders Chapel International</h3>
+
+            </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+        <!-- GALLERY -->
+        <section class="section gallery-section" id="gallery">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">LIFE TOGETHER</span>
+
+                    <h2>Moments of Faith <br>Fellowship and Service</h2>
+                    <p>Explore memories from our worship services, church
+                        gatherings, special programmes, ministry activities,
+                        and community outreach.</p>
+
+                        <p>
+                            Our gallery celebrates fellowship, service,
+                            and the journey we share as a church family.
+                        </p>
+                </div>
+
+                <div class="gallery-grid" id="publicGallery">
+                    <div class="gallery-item gallery-placeholder" role="img" aria-label="Worship gallery placeholder">
+                        <span>Worship</span>
+                    </div>
+                    <div class="gallery-item gallery-placeholder" role="img" aria-label="Fellowship gallery placeholder">
+                        <span>Fellowship</span>
+                    </div>
+                    <div class="gallery-item gallery-placeholder" role="img" aria-label="Outreach gallery placeholder">
+                        <span>Community Outreach</span>
+                    </div>
+                    <div class="gallery-item gallery-placeholder" role="img" aria-label="Church events gallery placeholder">
+                        <span>Church Events</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- DONATIONS -->
+        <section class="section donation-section" id="donations">
+            <div class="container donation-content">
+                <span class="eyebrow">GIVING WITH LOVE</span>
+                <h2>Support the Work of the Ministry</h2>
+                <p>Your generosity can support ministry activities, community outreach, and the work of the church.</p>
+                <p class="donation-note">Official giving instructions will be published after they have been approved by church leadership.</p>
+
+                <button type="button" class="btn btn-primary" data-open-donation>
+                    Giving Information
+                </button>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</span>
+                    <h2>Contact Our Church</h2>
+                    <p>Have a question, need prayer, or want to plan a visit? Send us a message.</p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <div class="contact-information">
+                        <div class="contact-item">
+                            <span class="contact-icon" aria-hidden="true">⌖</span>
+                            <div>
+                                <h3>Our Address</h3>
+                                <p>Church address to be added</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-icon" aria-hidden="true">☎</span>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>Official phone number to be added</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-icon" aria-hidden="true">✉</span>
+                            <div>
+                                <h3>Email</h3>
+                                <p>Official church email to be added</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Your Name</label>
+                            <input type="text" id="contactName" name="name" autocomplete="name" maxlength="100" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" name="email" autocomplete="email" maxlength="254" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <select id="contactSubject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="General Enquiry">General Enquiry</option>
+                                <option value="Prayer Request">Prayer Request</option>
+                                <option value="Membership">Membership</option>
+                                <option value="Events">Events</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Your Message</label>
+                            <textarea id="contactMessage" name="message" rows="5" maxlength="3000" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+
+                        <p id="contactStatus" class="form-status" role="status" aria-live="polite"></p>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+
+            <div class="footer-about">
+                <a href="#home" class="brand footer-brand">
+                    <span class="brand-logo">LGWCI</span>
+                    <span class="brand-text">
+                        <strong class="church-name">LATTER GLORY WONDERS CHAPEL INTERNATIONAL</strong>
+                        <small>Faith • Love • Service</small>
+                    </span>
+                </a>
+
+                <p>
+                    Your willing contributions can support the work of
+                    ministry, church programmes, evangelism, community
+                    outreach, and welfare initiatives.
+                    we encourage everyone to give freely and cheerfully,
+                    according to their ability and conviction.
+                </p>
+
+                <p>
+                    "For God loveth a cheerful giver."
+                    — 2 Corinthians 9:7 (KJV)
+                
+                    Official giving instructions and verified payment
+                    details will be provided by the church.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="#about">About Us</a>
+                <a href="#ministries">Ministries</a>
+                <a href="#events">Events</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Connect</h3>
+                <a href="#members">Membership</a>
+                <a href="#donations">Donations</a>
+                <a href="#contact">Contact Us</a>
+                <button type="button" class="footer-login-link" data-open-login>Member Login</button>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>
+                    &copy; <span id="currentYear">2026</span>
+                    <span class="church-name">LATTER GLORY WONDERS CHAPEL INTERNATIONAL</span>.
+                    All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIN MODAL -->
+    <div class="modal" id="loginModal" hidden>
+        <div class="modal-backdrop" data-close-modal></div>
+
+        <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+            <button type="button" class="modal-close" data-close-modal aria-label="Close login window">&times;</button>
+
+            <div class="modal-heading">
+                <span class="brand-logo">LGWCI</span>
+                <h2 id="loginTitle">Member Login</h2>
+                <p>Sign in to access your church account.</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" name="email" autocomplete="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="password" autocomplete="current-password" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                <p id="loginStatus" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="modal-links">
+                <button type="button" id="forgotPasswordButton">Forgot Password?</button>
+                <button type="button" data-open-register>Request Membership</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- PASSWORD RECOVERY MODAL -->
+    <div class="modal" id="recoveryModal" hidden>
+        <div class="modal-backdrop" data-close-modal></div>
+
+        <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="recoveryTitle">
+            <button type="button" class="modal-close" data-close-modal aria-label="Close recovery window">&times;</button>
+
+            <h2 id="recoveryTitle">Reset Your Password</h2>
+            <p>Enter your registered email address to request a password reset link.</p>
+
+            <form id="recoveryForm">
+                <div class="form-group">
+                    <label for="recoveryEmail">Email Address</label>
+                    <input type="email" id="recoveryEmail" name="email" autocomplete="email" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Send Reset Link</button>
+                <p id="recoveryStatus" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </div>
+
+    <!-- MEMBERSHIP REGISTRATION MODAL -->
+    <div class="modal" id="registerModal" hidden>
+        <div class="modal-backdrop" data-close-modal></div>
+
+        <section class="modal-card modal-card-wide" role="dialog" aria-modal="true" aria-labelledby="registerTitle">
+            <button type="button" class="modal-close" data-close-modal aria-label="Close registration window">&times;</button>
+
+            <h2 id="registerTitle">Membership Registration</h2>
+            <p>Submit your details to express interest in joining our church community.</p>
+
+            <form id="registrationForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="memberFullName">Full Name</label>
+                        <input type="text" id="memberFullName" name="full_name" autocomplete="name" maxlength="150" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="memberEmail">Email Address</label>
+                        <input type="email" id="memberEmail" name="email" autocomplete="email" maxlength="254" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="memberPhone">Phone Number</label>
+                        <input type="tel" id="memberPhone" name="phone" autocomplete="tel" maxlength="30" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="memberLocation">Town / City</label>
+                        <input type="text" id="memberLocation" name="location" autocomplete="address-level2" maxlength="150">
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="memberMinistry">Ministry of Interest</label>
+                        <select id="memberMinistry" name="ministry">
+                            <option value="">Not decided yet</option>
+                            <option value="Choir & Worship">Choir & Worship</option>
+                            <option value="Youth Ministry">Youth Ministry</option>
+                            <option value="Women & Men">Women & Men</option>
+                            <option value="Children's Ministry">Children's Ministry</option>
+                            <option value="Prayer & Evangelism">Prayer & Evangelism</option>
+                            <option value="Community Outreach">Community Outreach</option>
+                        </select>
+                    </div>
+                </div>
+
+                <p class="privacy-note">Your information will be handled according to the church's privacy policy.</p>
+
+                <button type="submit" class="btn btn-primary btn-full">Submit Registration</button>
+                <p id="registrationStatus" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </div>
+
+    <!-- DONATION INFORMATION MODAL -->
+    <div class="modal" id="donationModal" hidden>
+        <div class="modal-backdrop" data-close-modal></div>
+
+        <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="donationTitle">
+            <button type="button" class="modal-close" data-close-modal aria-label="Close donation information">&times;</button>
+
+            <h2 id="donationTitle">Giving Information</h2>
+            <p>We appreciate your willingness to support the work of the church.</p>
+            <p>Please contact the church office for verified giving instructions. Official bank details will be published here after approval.</p>
+
+            <a href="#contact" class="btn btn-primary btn-full" data-close-modal>Contact the Church</a>
+        </section>
+    </div>
+
+    <!-- MEMBER / ADMIN PORTAL -->
+    <section class="portal-section" id="memberPortal" hidden>
+        <div class="container">
+
+            <div class="portal-header">
+                <div>
+                    <span class="eyebrow">CHURCH COMMUNITY</span>
+                    <h1>Member Portal</h1>
+                    <p>Welcome, <span id="portalUserName">Member</span>.</p>
+                </div>
+
+                <button type="button" class="btn btn-outline-dark" id="logoutButton">Sign Out</button>
+            </div>
+
+            <div class="portal-navigation" aria-label="Portal navigation">
+                <button type="button" class="portal-tab active" data-portal-tab="memberHome">My Home</button>
+                <button type="button" class="portal-tab" data-portal-tab="memberDirectory">Members</button>
+                <button type="button" class="portal-tab" data-portal-tab="memberEvents">Events</button>
+                <button type="button" class="portal-tab" data-portal-tab="memberNotices">Announcements</button>
+                <button type="button" class="portal-tab admin-only" data-portal-tab="adminDashboard" hidden>Admin Dashboard</button>
+            </div>
+
+            <!-- MEMBER HOME -->
+            <div class="portal-panel active" id="memberHome">
+                <div class="dashboard-cards">
+                    <article class="dashboard-card">
+                        <span>Account</span>
+                        <strong id="memberAccountStatus">Signed In</strong>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <span>Upcoming Events</span>
+                        <strong id="memberEventCount">0</strong>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <span>Announcements</span>
+                        <strong id="memberNoticeCount">0</strong>
+                    </article>
+                </div>
+
+                <div class="portal-card">
+                    <h2>My Membership</h2>
+                    <p id="memberProfileMessage">
+                        Your membership information will appear here when your
+                        account is linked to an approved church membership record.
+                    </p>
+                </div>
+            </div>
+
+            <!-- MEMBER DIRECTORY -->
+            <div class="portal-panel" id="memberDirectory" hidden>
+                <div class="portal-card">
+                    <h2>Church Members</h2>
+                    <p>Only information approved for directory access will be displayed here.</p>
+
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">S/N</th>
+                                    <th scope="col">Member Name</th>
+                                    <th scope="col">Ministry</th>
+                                    <th scope="col">Location</th>
+                                </tr>
+                            </thead>
+                            <tbody id="memberDirectoryBody">
+                                <tr>
+                                    <td colspan="4">Member records will load here after database integration.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MEMBER EVENTS -->
+            <div class="portal-panel" id="memberEvents" hidden>
+                <div class="portal-card">
+                    <h2>Church Events</h2>
+                    <div id="memberEventsList">
+                        <p>Upcoming events will appear here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MEMBER ANNOUNCEMENTS -->
+            <div class="portal-panel" id="memberNotices" hidden>
+                <div class="portal-card">
+                    <h2>Church Announcements</h2>
+                    <div id="memberAnnouncementsList">
+                        <p>Church announcements will appear here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADMIN DASHBOARD -->
+            <div class="portal-panel" id="adminDashboard" hidden>
+                <div class="admin-heading">
+                    <div>
+                        <span class="eyebrow">RESTRICTED AREA</span>
+                        <h2>Administrator Dashboard</h2>
+                        <p>Manage church membership and public website content.</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-cards">
+                    <article class="dashboard-card">
+                        <span>Total Members</span>
+                        <strong id="adminTotalMembers">0</strong>
+                    </article>
+                    <article class="dashboard-card">
+                        <span>Upcoming Events</span>
+                        <strong id="adminTotalEvents">0</strong>
+                    </article>
+                    <article class="dashboard-card">
+                        <span>Announcements</span>
+                        <strong id="adminTotalAnnouncements">0</strong>
+                    </article>
+                </div>
+
+                <!-- ADMIN MEMBER MANAGEMENT -->
+                <section class="portal-card">
+                    <h2>Member Management</h2>
+
+                    <form id="adminMemberForm">
+                        <input type="hidden" id="adminMemberId">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="adminMemberName">Full Name</label>
+                                <input type="text" id="adminMemberName" maxlength="150" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="adminMemberEmail">Email</label>
+                                <input type="email" id="adminMemberEmail" maxlength="254">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="adminMemberPhone">Phone</label>
+                                <input type="tel" id="adminMemberPhone" maxlength="30">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="adminMemberLocation">Location</label>
+                                <input type="text" id="adminMemberLocation" maxlength="150">
+                            </div>
+
+                            <div class="form-group form-group-full">
+                                <label for="adminMemberMinistry">Ministry</label>
+                                <select id="adminMemberMinistry">
+                                    <option value="">Select Ministry</option>
+                                    <option value="Choir & Worship">Choir & Worship</option>
+                                    <option value="Youth Ministry">Youth Ministry</option>
+                                    <option value="Women & Men">Women & Men</option>
+                                    <option value="Children's Ministry">Children's Ministry</option>
+                                    <option value="Prayer & Evangelism">Prayer & Evangelism</option>
+                                    <option value="Community Outreach">Community Outreach</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Save Member</button>
+                            <button type="button" class="btn btn-secondary" id="clearMemberForm">Clear Form</button>
+                        </div>
+
+                        <p id="adminMemberStatus" class="form-status" role="status" aria-live="polite"></p>
+                    </form>
+
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">S/N</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone</th>
+                                    <th scope="col">Ministry</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminMembersBody">
+                                <tr>
+                                    <td colspan="6">Member records will appear here after database integration.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- ADMIN EVENT MANAGEMENT -->
+                <section class="portal-card">
+                    <h2>Manage Events</h2>
+
+                    <form id="adminEventForm">
+                        <input type="hidden" id="adminEventId">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="adminEventTitle">Event Title</label>
+                                <input type="text" id="adminEventTitle" maxlength="200" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="adminEventDate">Event Date</label>
+                                <input type="date" id="adminEventDate" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="adminEventTime">Event Time</label>
+                                <input type="time" id="adminEventTime">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="adminEventLocation">Location</label>
+                                <input type="text" id="adminEventLocation" maxlength="200">
+                            </div>
+
+                            <div class="form-group form-group-full">
+                                <label for="adminEventDescription">Description</label>
+                                <textarea id="adminEventDescription" rows="3" maxlength="3000"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Save Event</button>
+                        <p id="adminEventStatus" class="form-status" role="status" aria-live="polite"></p>
+                    </form>
+
+                    <div id="adminEventsList">
+                        <p>Managed events will appear here.</p>
+                    </div>
+                </section>
+
+                <!-- ADMIN ANNOUNCEMENT MANAGEMENT -->
+                <section class="portal-card">
+                    <h2>Manage Announcements</h2>
+
+                    <form id="adminAnnouncementForm">
+                        <input type="hidden" id="adminAnnouncementId">
+
+                        <div class="form-group">
+                            <label for="adminAnnouncementTitle">Title</label>
+                            <input type="text" id="adminAnnouncementTitle" maxlength="200" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="adminAnnouncementBody">Announcement</label>
+                            <textarea id="adminAnnouncementBody" rows="4" maxlength="5000" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Publish Announcement</button>
+                        <p id="adminAnnouncementStatus" class="form-status" role="status" aria-live="polite"></p>
+                    </form>
+
+                    <div id="adminAnnouncementsList">
+                        <p>Managed announcements will appear here.</p>
+                    </div>
+                </section>
+            </div>
+
+            <p id="portalStatus" class="form-status" role="status" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <!-- GENERAL NOTIFICATION -->
+    <div id="siteNotification"
+         class="site-notification"
+         role="status"
+         aria-live="polite"
+         hidden></div>
+
+</body>
+</html>
+```
