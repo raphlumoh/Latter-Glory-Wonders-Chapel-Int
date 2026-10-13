@@ -2041,3 +2041,23 @@ background-position: center center;
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* Fix event date wrapping */
+.event-date,
+.event-meta,
+.event-details,
+.event-card time {
+    white-space: nowrap;
+}
+
+/* Allow event cards to use enough horizontal space */
+.event-card {
+    min-width: 0;
+}
+
+.event-card * {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
