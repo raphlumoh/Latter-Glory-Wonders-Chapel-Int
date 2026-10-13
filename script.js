@@ -740,6 +740,8 @@ function renderEvents(events) {
 
             const date = document.createElement("p");
             date.textContent = `Date: ${formatDate(item.event_date)}`;
+            date.classList.add("event-date");
+
 
             const time = document.createElement("p");
             time.textContent = `Time: ${item.event_time || "To be announced"}`;
