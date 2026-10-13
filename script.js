@@ -1259,8 +1259,8 @@ async function loadMemberDirectory() {
     if (!container) return;
 
     try {
-        const { data, error } = await supabaseClient
-            .from("church_members")
+        const { data, error } = await supabaseClient.from("church_member_directory")
+
             .select("id, full_name, location, ministry")
             .order("full_name", { ascending: true });
 
