@@ -1640,15 +1640,62 @@ function initializeForms() {
 }
 
 
+
 /* =========================================================
    19. START THE WEBSITE
 ========================================================= */
 
+function initializeMobileMenu() {
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNavigation = document.getElementById("mainNavigation");
+
+    if (!menuToggle || !mainNavigation) {
+        console.warn(
+            "Mobile menu button or navigation was not found."
+        );
+        return;
+    }
+
+    function closeMenu() {
+        mainNavigation.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+        );
+    }
+
+    menuToggle.addEventListener("click", function () {
+        const isOpen = mainNavigation.classList.toggle("is-open");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+        );
+    });
+
+    mainNavigation.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+    });
+}
+
 async function startWebsite() {
+    // Initialize the mobile navigation.
+    initializeMobileMenu();
+
+    // Initialize existing website features.
     initializeModals();
     initializePortalNavigation();
     initializeForms();
 
+    // Connect to Supabase.
     const connected = initializeSupabase();
 
     if (!connected) {
@@ -1656,31 +1703,50 @@ async function startWebsite() {
         return;
     }
 
-    await refreshSession();
-
-    // Load public events and announcements even when signed out.
-    await Promise.all([
-        loadEvents(),
-        loadAnnouncements()
-    ]);
-
-    if (currentUser) {
-        await loadPortalData();
-    }
-
+    // Register the authentication listener.
     supabaseClient.auth.onAuthStateChange(() => {
-        /*
-          Let Supabase finish its auth callback before making
-          additional database requests.
-        */
         setTimeout(async () => {
-            await refreshSession();
+            try {
+                await refreshSession();
 
-            if (currentUser) {
-                await loadPortalData();
+                if (currentUser) {
+                    await loadPortalData();
+                } else {
+                    // Clear private portal data on logout
+                    // if your website has a suitable cleanup function.
+                }
+            } catch (error) {
+                console.error(
+                    "Authentication update failed:",
+                    error
+                );
             }
         }, 0);
     });
+
+    try {
+        // Restore the current login session.
+        await refreshSession();
+
+        // Load public website content.
+        await Promise.all([
+            loadEvents(),
+            loadAnnouncements()
+        ]);
+
+        // Load portal data for a signed-in member.
+        if (currentUser) {
+            await loadPortalData();
+        }
+    } catch (error) {
+        console.error(
+            "Website initialization failed:",
+            error
+        );
+    }
 }
 
-document.addEventListener("DOMContentLoaded", startWebsite);
+document.addEventListener(
+    "DOMContentLoaded",
+    startWebsite
+);
