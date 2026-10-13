@@ -2061,3 +2061,23 @@ background-position: center center;
     word-break: normal;
 }
 
+
+/* Keep event dates together after JavaScript renders events */
+.event-card .event-date {
+    display: block;
+    white-space: nowrap;
+    word-break: normal;
+    overflow-wrap: normal;
+    width: max-content;
+    max-width: 100%;
+}
+
+/* Prevent event cards from shrinking too narrowly */
+.event-card {
+    min-width: 0;
+}
+
+#publicEvents .event-card,
+#memberEventsList .event-card {
+    overflow-wrap: normal;
+}
