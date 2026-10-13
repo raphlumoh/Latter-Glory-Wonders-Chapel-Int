@@ -247,26 +247,27 @@ section[id] {
 }
 
 .brand-logo {
-    width: 49px;
-    height: 49px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    display: block;
     flex-shrink: 0;
-    color: var(--white);
-    background: var(--primary);
-    border: 2px solid var(--gold);
     border-radius: 50%;
-    font-size: 0.85rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
+    border: 3px solid #facc15;
+    padding: 3px;
+    background-color: #ffffff;
 }
 
-.brand-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    min-width: 0;
+.brand-text small {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #facc15;
+    letter-spacing: 1.2px;
+    margin-top: 5px;
+    line-height: 1.5;
+    opacity: 1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .brand-text strong,
@@ -2098,8 +2099,7 @@ background-position: center center;
         line-height: 1.7;
     }
 }
-
-/*  Gallery images  testing*/
+/*  Gallery images */
 
 .gallery-item {
     position: relative;
@@ -2132,6 +2132,3 @@ background-position: center center;
     );
     box-sizing: border-box;
 }
-
-
-
