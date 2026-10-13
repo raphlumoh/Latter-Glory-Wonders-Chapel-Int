@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#14532d">
+
+    <title>Administrator Login | LGWCI</title>
+    <meta name="description"
+          content="Authorized administrator sign-in for Latter Glory Wonders Chapel International.">
+
+    <link rel="stylesheet" href="admin-login.css">
+
+    <!-- Supabase JavaScript library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Our login logic -->
+    <script src="admin-login.js" defer></script>
+</head>
+
+<body>
+    <main class="login-page">
+        <section class="login-card" aria-labelledby="loginTitle">
+
+            <a class="back-link" href="index.html">
+                &larr; Back to church website
+            </a>
+
+            <div class="brand">
+                <div class="brand-logo" aria-label="LGWCI logo">LGWCI</div>
+                <p class="brand-name">LATTER GLORY</p>
+                <p class="brand-name brand-name-small">
+                    WONDERS CHAPEL INTERNATIONAL
+                </p>
+                <p class="brand-tagline">Faith &bull; Love &bull; Service</p>
+            </div>
+
+            <div class="heading">
+                <span class="eyebrow">SECURE ACCESS</span>
+                <h1 id="loginTitle">Administrator Login</h1>
+                <p>
+                    Sign in with your authorized church administrator
+                    account to continue.
+                </p>
+            </div>
+
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="adminEmail">Email address</label>
+                    <input
+                        type="email"
+                        id="adminEmail"
+                        name="email"
+                        placeholder="Enter your administrator email"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+
+                    <div class="password-wrap">
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="toggle-password"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >
+                            Show
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" id="loginButton" class="login-button">
+                    Sign In Securely
+                </button>
+
+                <p id="loginMessage"
+                   class="status-message"
+                   role="status"
+                   aria-live="polite"></p>
+            </form>
+
+            <button type="button" id="forgotPasswordButton"
+                    class="forgot-button">
+                Forgot your password?
+            </button>
+
+            <div class="security-note">
+                <span aria-hidden="true">&#128274;</span>
+                <p>
+                    This portal is restricted to authorized church
+                    administrators. Access is verified before entry.
+                </p>
+            </div>
+
+            <footer>
+                &copy; <span id="currentYear"></span>
+                Latter Glory Wonders Chapel International
+            </footer>
+        </section>
+    </main>
+</body>
+</html>
