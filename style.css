@@ -2098,13 +2098,17 @@ background-position: center center;
         line-height: 1.7;
     }
 }
-/*  test */
+
+/*  Gallery images  testing*/
 
 .gallery-item {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    aspect-ratio: 4 / 3;
     background: var(--primary-light);
     border-radius: var(--radius-md);
+    box-sizing: border-box;
 }
 
 .gallery-item img {
@@ -2122,6 +2126,12 @@ background-position: center center;
     width: 100%;
     padding: 15px;
     color: #fff;
-    background: linear-gradient(transparent, rgba(4, 101, 52, 0.75));
+    background: linear-gradient(
+        transparent,
+        rgba(4, 101, 52, 0.75)
+    );
     box-sizing: border-box;
 }
+
+
+
