@@ -2043,41 +2043,93 @@ background-position: center center;
 }
 
 
-/* Fix event date wrapping */
-.event-date,
-.event-meta,
-.event-details,
-.event-card time {
-    white-space: nowrap;
-}
+/* =========================================================
+   FINAL EVENT CARD FIX — LGWCI
+   Keep date, time and location readable on all screens
+========================================================= */
 
-/* Allow event cards to use enough horizontal space */
 .event-card {
-    min-width: 0;
-}
-
-.event-card * {
-    overflow-wrap: normal;
-    word-break: normal;
-}
-
-
-/* Keep event dates together after JavaScript renders events */
-.event-card .event-date {
     display: block;
-    white-space: nowrap;
-    word-break: normal;
-    overflow-wrap: normal;
-    width: max-content;
-    max-width: 100%;
-}
-
-/* Prevent event cards from shrinking too narrowly */
-.event-card {
+    width: 100%;
     min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+    overflow: visible;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
 }
 
-#publicEvents .event-card,
-#memberEventsList .event-card {
-    overflow-wrap: normal;
+/* Event title */
+.event-card h3 {
+    display: block;
+    width: 100%;
+    margin: 0 0 16px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+/* Date, time, location and description */
+.event-card .event-date,
+.event-card .event-time,
+.event-card .event-location,
+.event-card .event-description {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 0;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: none;
+    flex: initial;
+    color: var(--text-light);
+    background: transparent;
+    border: 0;
+}
+
+/* Highlight the event details */
+.event-card .event-date,
+.event-card .event-time,
+.event-card .event-location {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Keep the description distinct */
+.event-card .event-description {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-weight: 400;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    .event-card {
+        padding: 18px;
+    }
+
+    .event-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .event-card .event-date,
+    .event-card .event-time,
+    .event-card .event-location,
+    .event-card .event-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
 }
