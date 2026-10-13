@@ -17,11 +17,10 @@
 ========================================================= */
 
 const SUPABASE_URL =
-   "https://avjqntjyjpswefwjnxyn.supabase.co";
+    "https://avjqntjyjpswefwjnxyn.supabase.co";
 
-const SUPABASE_PUBLISHABLE_KEY = 
-   "sb_publishable_VSjjhu3RrcOBntgKvRik7w_EKTmEGyE";
-
+const SUPABASE_PUBLISHABLE_KEY =
+    "sb_publishable_VSjjhu3RrcOBntgKvRik7w_EKTmEGyE";
 
 let supabaseClient = null;
 let currentUser = null;
@@ -715,6 +714,7 @@ async function loadEvents() {
     }
 }
 
+
 function renderEvents(events) {
     const containers = [
         byId("publicEvents"),
@@ -724,36 +724,62 @@ function renderEvents(events) {
     containers.forEach(container => {
         container.replaceChildren();
 
-        if (!events.length) {
+        // Show a message when there are no events
+        if (!events || events.length === 0) {
             const message = document.createElement("p");
             message.textContent = "No events have been published yet.";
             container.appendChild(message);
             return;
         }
 
+        // Display each event
         events.forEach(item => {
             const card = document.createElement("article");
             card.className = "event-card";
 
+            // Event title
             const title = document.createElement("h3");
             title.textContent = item.title || "Church Event";
 
+            // Event date
             const date = document.createElement("p");
-            date.textContent = `Date: ${formatDate(item.event_date)}`;
-            date.classList.add("event-date");
+            date.className = "event-date";
+            date.textContent = `Date: ${
+                item.event_date
+                    ? formatDate(item.event_date)
+                    : "To be announced"
+            }`;
 
-
+            // Event time
             const time = document.createElement("p");
-            time.textContent = `Time: ${item.event_time || "To be announced"}`;
+            time.className = "event-time";
+            time.textContent = `Time: ${
+                item.event_time || "To be announced"
+            }`;
 
+            // Event location
             const location = document.createElement("p");
-            location.textContent =
-                `Location: ${item.location || "To be announced"}`;
+            location.className = "event-location";
+            location.textContent = `Location: ${
+                item.location || "To be announced"
+            }`;
 
+            // Event description
             const description = document.createElement("p");
-            description.textContent = item.description || "";
+            description.className = "event-description";
+            description.textContent =
+                item.description || "More details will be announced soon.";
 
-            card.append(title, date, time, location, description);
+            // Add all event details to the card
+            card.append(
+                title,
+                date,
+                time,
+                location,
+                description
+            );
+
+            // Add the card to the page
             container.appendChild(card);
         });
     });
@@ -809,7 +835,11 @@ async function handleAdminEventSubmit(event) {
         if (result.error) throw result.error;
 
         form.reset();
-        setText("adminEventId", "");
+
+        const eventIdField = byId("adminEventId");
+        if (eventIdField) {
+            eventIdField.value = "";
+        }
         showFormStatus(form, id ? "Event updated." : "Event published.", "success");
 
         await loadEvents();
@@ -1023,7 +1053,11 @@ async function handleAdminAnnouncementSubmit(event) {
         if (result.error) throw result.error;
 
         form.reset();
-        setText("adminAnnouncementId", "");
+
+        const announcementIdField = byId("adminAnnouncementId");
+        if (announcementIdField) {
+            announcementIdField.value = "";
+        }
         showFormStatus(
             form,
             id ? "Announcement updated." : "Announcement published.",
@@ -1259,10 +1293,9 @@ async function loadMemberDirectory() {
 
     const container = byId("memberDirectoryBody");
     if (!container) return;
-
+//supabaseClient.from("church_member_directory")
     try {
         const { data, error } = await supabaseClient.from("church_member_directory")
-
             .select("id, full_name, location, ministry")
             .order("full_name", { ascending: true });
 
