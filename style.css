@@ -1645,7 +1645,8 @@ background-position: center center;
     }
 }
 
-/* 25. RESPONSIVE: TABLETS */
+
+/* 25. MOBILE NAVIGATION DROPDOWN */
 @media (max-width: 950px) {
     .menu-toggle {
         display: flex;
@@ -1661,13 +1662,16 @@ background-position: center center;
         top: calc(100% + 1px);
         left: 0;
         right: 0;
+
         display: none;
         align-items: stretch;
         flex-direction: column;
         gap: 4px;
+
         max-height: calc(100vh - 100px);
         padding: 18px 20px;
         overflow-y: auto;
+
         background: var(--white);
         border: 1px solid var(--border);
         border-top: none;
@@ -1675,7 +1679,8 @@ background-position: center center;
         box-shadow: var(--shadow-md);
     }
 
-    .main-navigation.open {
+    /* Must match the JavaScript class name */
+    .main-navigation.is-open {
         display: flex;
     }
 
@@ -1693,41 +1698,8 @@ background-position: center center;
         width: 100%;
         margin-top: 8px;
     }
-
-    .hero-section {
-        min-height: 530px;
-    }
-
-    .section {
-        padding: 75px 0;
-    }
-
-    .two-column {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .about-image {
-        min-height: 340px;
-    }
-
-    .card-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .footer-grid {
-        gap: 35px;
-    }
 }
+
 
 /* 26. RESPONSIVE: PHONES */
 @media (max-width: 600px) {
@@ -2131,4 +2103,3 @@ background-position: center center;
         line-height: 1.7;
     }
 }
-
